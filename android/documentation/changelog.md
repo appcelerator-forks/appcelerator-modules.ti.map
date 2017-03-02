@@ -1,5 +1,24 @@
 # Change Log
 <pre>
+v3.1.0    Android: Add style property [MOD-2311]
+v3.0.2    Fix addPolyline() handler
+v3.0.1    Update Google Play Services to v9.6.1 (revision 33)
+v2.3.10   Android null check on map.clear()
+v2.3.9    Android: Annotation.pincolor can't be changed if annotation added to mapView. [TIMOB-20620]
+v2.3.8    Support annotation's image property with Ti.Blob [MOD-2205]
+v2.3.7    Android: Provide the method setMapToolbarEnabled [MOD-2189]
+v2.3.6    Add Street View Panorama [TIMOB-19751]
+v2.3.5    Refactor module to use getMapAsync [TIMOB-19726]
+v2.3.4    Recompiled map with NDK r10e [TIMOB-19681]
+v2.3.3    Update toImage() signature [TIMOB-19314]
+          Strip down Google Play Services library to include only maps components [TIMOB-18082]
+
+v2.3.2    Update Google Play Services library and assets [TIMOB-18988]
+
+v2.3.1    Add drawing support. Includes polygons, polylines, and circles. [TIMOB-15410]
+          Ensure region property is set after mapMove on android to match behavior of ios. [TIMOB-17857]
+
+v2.3.0    Fixed a couple crashing issues with map, added API name. [TIMOB-18244]
 
 v2.2.5    Fixed the example. [MOD-2073]
 

@@ -76,7 +76,9 @@
 
 -(void)refreshAfterDelay
 {
-	[self performSelector:@selector(refreshIfNeeded) withObject:nil afterDelay:0.1];
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void) {
+		[self refreshIfNeeded];
+	});
 }
 
 -(void)setNeedsRefreshingWithSelection: (BOOL)shouldReselect
@@ -190,9 +192,9 @@
 	}
 }
 
-- (MKPinAnnotationColor)pinColor
+-(id)pincolor
 {
-	return [TiUtils intValue:[self valueForUndefinedKey:@"pincolor"]];
+    return [TiUtils intValue:[self valueForUndefinedKey:@"pincolor"]];
 }
 
 -(void)setPincolor:(id)color

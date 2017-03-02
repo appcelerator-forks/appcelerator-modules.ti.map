@@ -10,7 +10,6 @@
 #import "TiMapIOS7ViewProxy.h"
 #import "TiMapCameraProxy.h"
 #import <MapKit/MapKit.h>
-
 @implementation TiMapModule
 
 #pragma mark Internal
@@ -60,9 +59,14 @@ MAKE_SYSTEM_PROP(STANDARD_TYPE,MKMapTypeStandard);
 MAKE_SYSTEM_PROP(NORMAL_TYPE,MKMapTypeStandard); // For parity with Android
 MAKE_SYSTEM_PROP(SATELLITE_TYPE,MKMapTypeSatellite);
 MAKE_SYSTEM_PROP(HYBRID_TYPE,MKMapTypeHybrid);
-MAKE_SYSTEM_PROP(ANNOTATION_RED,MKPinAnnotationColorRed);
-MAKE_SYSTEM_PROP(ANNOTATION_GREEN,MKPinAnnotationColorGreen);
-MAKE_SYSTEM_PROP(ANNOTATION_PURPLE,MKPinAnnotationColorPurple);
+#ifdef __IPHONE_9_0
+MAKE_SYSTEM_PROP(HYBRID_FLYOVER_TYPE, MKMapTypeHybridFlyover);
+MAKE_SYSTEM_PROP(SATELLITE_FLYOVER_TYPE, MKMapTypeSatelliteFlyover);
+#endif
+
+MAKE_SYSTEM_PROP(ANNOTATION_RED, MKPinAnnotationColorRed);
+MAKE_SYSTEM_PROP(ANNOTATION_GREEN, MKPinAnnotationColorGreen);
+MAKE_SYSTEM_PROP(ANNOTATION_PURPLE, MKPinAnnotationColorPurple);
 
 MAKE_SYSTEM_PROP(ANNOTATION_DRAG_STATE_NONE,MKAnnotationViewDragStateNone);
 MAKE_SYSTEM_PROP(ANNOTATION_DRAG_STATE_START,MKAnnotationViewDragStateStarting);
