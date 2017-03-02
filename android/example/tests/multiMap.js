@@ -1,5 +1,5 @@
-
 exports.title = 'Multi Maps';
+exports.color = 'black';
 exports.run = function(UI, Map) {
     var win = UI.createWindow();
     
@@ -50,4 +50,4 @@ exports.run = function(UI, Map) {
     win.add(map4);
     
     win.open();
-}
+};
